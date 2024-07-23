@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>20XX Event Schedule</title>
+	</head>
+	<style>
+    ul { padding-left:18px}
+    h1 { padding-left:10px; text-align: center;}
+    h2 { padding-left:10px; margin:0px; border:0px;}
+    .gx { border:0px; margin:0px;padding-left:10px; padding-bottom:1px; }
+    .g1 {background-color:#d1ec8e5e;}
+    .g2 {background-color:hsla(67, 100%, 50%, 0.369);}
+	</style>
+	
+	<script> 
+		//
+		// note: the following js is "rough-n-ready" not a display of prowess/finess or anything
+		//        just a proof of concept for showing and hiding event items
+        //       A real life situation would have it branded and integrated into an existing web site.
+		//
+function hideitshowit(elementID) {
+  var xD = document.getElementById("D"+elementID+"D");
+  if (xD.style.display === "none") {
+    showit(elementID);
+  } else {
+    hideit(elementID);
+  }
+} 
+function hideit(xID) {
+  hidebyID("D"+xID+"D");
+  showbyID("S"+xID+"S");
+  hidebyID("H"+xID+"H");
+}
+function hidebyID(elementID)
+{
+    var xitem = document.getElementById(elementID);
+    xitem.style.display = "none";
+}
+function showit(xID) {
+  showbyID("D"+xID+"D");
+  hidebyID("S"+xID+"S");
+  showbyID("H"+xID+"H");
+}
+function showbyID(elementID)
+{
+    var xitem = document.getElementById(elementID);
+    xitem.style.display = "block";
+}
+function hideall()
+{
+    hideit(1);
+    hideit(2);
+    hideit(3);
+    hideit(4);
+    hideit(5);
+    hidebyID('HxH');
+    showbyID('SxS');
+}
+function showall()
+{
+    showit(1);
+    showit(2);
+    showit(3);
+    showit(4);
+    showit(5);
+    showbyID('HxH');
+    hidebyID('SxS');
+}
+</script>
+
+<body style="border:0px; margin:0px;padding:2px;background-color: aliceblue;">
+<form method="post" action="./" id="ctl01">
+
+<div class="container body-content" style="width: 375px; margin:auto;">
+       
+<h1>SOME CITY EXHIBITION</h1>
+
+<h2><a id="SxS" onclick="showall();">Daily&nbsp;Schedule&nbsp;20XX&nbsp;[+]</a><a style="display:none;" id="HxH" onclick="hideall();">Daily&nbsp;Schedule&nbsp;20XX&nbsp;[-]</a></h2>
+
+<div class="gx g1">
+<h2 >
+<a id="S1S" style="display:none;" onclick='hideitshowit(1);' title="Show this day">[+]&nbsp;Tue&nbsp;Aug&nbsp;1<sup>st</sup><small>&nbsp;DAY&nbsp;1</small></a>
+<a id="H1H" onclick='hideitshowit(1);' title="Hide this day">[-]&nbsp;Tue Aug 1<sup>st</sup><small>&nbsp;DAY&nbsp;1</small></a>
+</h2>
+ 
+<div id="D1D">
+<p>$5.00 day only</p>
+<p>PARADE Starts at 6pm Route: From 13th St, North on Central Ave to
+River St, East to 6th Ave and South to the Exhibition Grounds.</p>
+<h3>Welcome Back Day</h3>
+<p>(MIDWAY STARTS Aug. 2, 20XX)</p>
+
+<ul>
+<li><b>Seniors Drop-in</b> - Noon - 5:00 PM - Log House</li>
+<li><b>Eric the Juggler</b> - Noon - 8:00 PM Fair Grounds</li>
+<li><b>Meadowcraft Pony Rides & Barn Yard Animals & Bouncy Castles</b> - Noon to 8:00 PM - Grass Ring & Archie Andrews</li>
+<li><b>Ag & Horticulture Display</b> - Noon - 8pm -Main Hall</li>
+    <li><b>Amateur Photography Show</b> - Noon - 8pm - Main Hall</li>
+    <li><b>Beer Gardens</b> - Open at 2pm daily - Main hall and in Grandstands</li>
+    <li><b>Entertainment</b> - 3:00 to 11:00pm - Main Hall</li>
+    <li><b>Brandt Pedal Tractor Pull Challenge</b> - 3:30pm - Front of Main Building</li>
+    <li><b>Food booths/trucks and Merch booths</b> - Noon to 11:00pm</li>
+    <li><b>Fair Tradeshow</b> - Noon to 8:00pm - In Armoury</li>
+    <li><b>Chariot Races</b> - 3:00pm - Grandstand</li></li>
+    <li><b>Chuckwagons</b> - 7:30pm - Grandstand</li>
+</ul>
+</div>
+</div>
+
+<div class="gx g2">
+<h2><a id="S2S" style="display:none;" onclick='hideitshowit(2);' title="Show this day">[+]&nbsp;Wed&nbsp;Aug&nbsp;2<sup>nd</sup><small>&nbsp;DAY&nbsp;2</small></a>
+    <a id="H2H" onclick='hideitshowit(2);' title="Hide this day">[-]&nbsp;Wed&nbsp;Aug&nbsp;2<sup>nd</sup><small>&nbsp;DAY&nbsp;2</small></a>
+</h2>
+ 
+<div id="D2D">
+<p>(MIDWAY STARTS AUG. 2, 20XX)</p>
+<ul><li><b>4-H Horse Show</b> -9:00am - North Ring</li>
+    <li><b>Seniors Drop-in</b> - Noon-5:00pm - Log House</li>
+    <li><b>West Coast Amusement</b> -1:00pm to Midnight - Midway</li>
+    <li><b>Ag & Horticulture Display</b> - Noon-8:00pm - Main Hall </li>
+    <li><b>Amateur Photography Show</b> - Noon - 8pm - Main Hall</li>
+    <li><b>Eric the Juggler</b> - Noon - 8:00pm - Fair Grounds</li>
+    <li><b>Beer Gardens</b> - Open at 2pm daily - Main hall and in Grandstands</li>
+    <li><b>Brandt Pedal Tractor Pull Challenge</b> - 3:30pm - Front of Main Building</li>
+    <li><b>Meadowcroft Pony Rides & Barn Yard Animals & Bouncy Castle</b> - Noon to 8pm -Grass Ring & Archie Anderson Building</li>
+    <li><b>Entertainment</b> - 3:00 to 11:00pm - Main Hall</li>
+    <li><b>Food booths/trucks and Merch booths</b> - Noon to 11:00pm</li>
+    <li><b>Fair Tradeshow</b> - Noon to 8:00pm - In Armoury</li>
+    <li><b>Chariot Races</b> - 3:00pm -Grandstand</li>
+    <li><b>Chuckwagons</b> -6:30pm -Grandstand</li>
+    <li><b>Midnight Midway Closes</b></li>    
+</ul>
+</div>
+</div>
+
+<div class="gx g1">
+<h2><a id="S3S" style="display:none;" onclick='hideitshowit(3);' title="Show this day">[+]&nbsp;Thur&nbsp;Aug&nbsp;3<sup>rd</sup><small>&nbsp;DAY&nbsp;3</small></a>
+    <a id="H3H" onclick='hideitshowit(3);' title="Hide this day">[-]&nbsp;Thur&nbsp;Aug&nbsp;3<sup>rd</sup><small>&nbsp;DAY&nbsp;3</small></a></h2>
+ 
+<div id="D3D">
+
+<ul><li><b>4-H Horse Show</b> - 9:00am - North Ring</li>
+    <li><b>Seniors Drop-in</b> - Noon-6:00pm - Log House</li>
+    <li><b>West Coast Amusement</b> - 1:00pm to Midnight - Midway</li>
+    <li><b>Meadowcroft Pony Rides & Barn Yard Animals & Bouncy Castles</b> - Noon to 8pm -Grass Ring & Archie Anderson Building</li>
+    <li><b>Ag & Horticulture Display</b> - Noon -8:00pm - Main Hall</li>
+    <li><b>Amateur Photography Show</b> - Noon - 8pm - Main Hall</li>
+    <li><b>Eric the Juggler</b> - Noon - 8:00pm - Fair Grounds</li>
+    <li><b>Beer Gardens</b> - Open at 2pm daily - Main hall and in Grandstands</li>
+    <li><b>Brandt Pedal Tractor Pull Challenge</b> - 3:30pm - Front of Main Building</li>
+    <li><b>Entertainment</b> - 3:00pmto 11:00pm - Main Hall</li>
+    <li><b>Food booths/trucks and Merch booths</b> Noon to 11:00pm</li>
+    <li><b>Fair Tradeshow</b> - Noon to 8:00pm - In Armoury</li>
+    <li><b>Chariot Races</b> - 3:00pm - Grandstand</li>
+    <li><b>Chuckwagons</b> - 6:30 pm -Grandstand</li>
+    <li><b>Midnight Midway Closes</b></li>
+</ul>
+</div>
+</div>
+
+<div class="gx g2">
+<h2><a id="S4S" style="display:none;" onclick='hideitshowit(4);' title="Show this day">[+]&nbsp;Fri&nbsp;Aug&nbsp;4<sup>th</sup><small>&nbsp;DAY&nbsp;4</small></a>
+    <a id="H4H" onclick='hideitshowit(4);' title="Hide this day">[-]&nbsp;Fri&nbsp;Aug&nbsp;4<sup>th</sup><small>&nbsp;DAY&nbsp;4</small></a></h2>
+ 
+<div id="D4D">
+<ul><li><b>Open Light Horse Show</b> -9:00am - North Ring</li>
+    <li><b>Weighing of Steers</b> -8:00am - 9:00 am - Barn 0</li>
+    <li><b>Dean Horn Memorial Junior Show judging</b> -10am - Cattle Rig</li>
+    <li><b>Lord of the Rings Bull Calf Jackpot</b> -11:00am - Cattle Ring</li>
+    <li><b>Princess Classic Heifer Calf Jackpot</b> - Noon - Cattle Ring</li>
+    <li><b>Steer Calf Jackpot</b> - 2:00pm - Cattle Ring</li>
+    <li><b>Steer Jackpot</b> -3:00pm - Cattle Ring</li>
+    <li><b>Anderson Motors Little Lady Classic Bred Heifer Jackpot</b> - 5:00pm - Cattle Ring</li>
+    <li><b>Seniors Drop-in</b> - Noon-6:00pm - Log House</li>
+    <li><b>Meadowcroft Pony Rides & Barn Yard Animals & Bouncy Castles</b> - Noon to 8pm - Grass Ring & Archie Anderson Building</li>
+    <li><b>Beer Gardens</b> - Open at 2pm daily - Main hall and in Grandstands</li>
+    <li><b>Brandt Pedal Tractor Pull Challenge</b> - 3:30pm - Front of Mair Building</li>
+    <li><b>West Coast Amusement</b> - 1:00pm to Midnight - Midway</li>
+    <li><b>Ag & Horticulture Display</b> - Noon to 9pm - Main Hall</li>
+    <li><b>Amateur Photography Show</b> - Noon - 8pm - Main Hall</li>
+    <li><b>Eric the Juggler</b> - Noon - 8:00pm - Fair Grounds</li>
+    <li><b>Qu'Appelle Valley Heavy Horse Pull</b> - 4:00pm - Main Ring</li>
+    <li><b>Entertainment</b> -3:00 to 11:00pm - Main Hall</li>
+    <li><b>Food booths/trucks and Merch booths</b> - Noon to 11:00pm</li>
+    <li><b>Fair Tradeshow</b> Noon to 8:00pm -In Armoury</li>
+    <li><b>Chariot Races</b> -3:00pm - Grandstand</li>
+    <li><b>Chuckwagons</b> - 6:30pm - Grandstand</li>
+    <li><b>Midnight Midway Closes</b></li>
+</ul>
+</div>
+</div>
+
+<div class="gx g1">
+<h2><a id="S5S" style="display:none;" onclick='hideitshowit(5);' title="Show this day">[+]&nbsp;Sat&nbsp;Aug&nbsp;5<sup>th</sup><small>&nbsp;DAY&nbsp;5</small></a>
+    <a id="H5H" onclick='hideitshowit(5);' title="Hide this day">[-]&nbsp;Sat&nbsp;Aug&nbsp;5<sup>th</sup><small>&nbsp;DAY&nbsp;5</small></a></h2>
+ 
+<div id="D5D">
+
+<ul><li><b>Open Light Horse Show</b> - 9:00am - North Ring</li>
+    <li><b>Dean Horn Memorial Junior Bred Heifer Show</b> - 9:00am Cattle Ring</li>
+    <li><b>Beef Cattle Breed Open Shows</b> - 10:30am - Cattle Ring</li>
+    <li><b>Supreme Show- Agribition Beef Supreme, Presented by CN Qualifier</b> - 6:00pm - Cattle Ring</li>
+    <li><b>Seniors Drop-in</b> - Noon-5:00pm - Log House</li>
+    <li><b>Meadowcroft Pony Rides & Barn Yard Animals & Bouncy Castle</b> - Noon to 8pm -Grass Ring & Archie Anderson Building</li>
+    <li><b>West Coast Amusement</b> - 1:00pm to Midnight - Midway</li>
+    <li><b>Ag & Horticulture Display</b> -Noon-6:00pm -Main Hall</li>
+    <li><b>Amateur Photography Show</b> - Noon - 8pm - Main Hall</li>
+    <li><b>Beer Gardens</b> - Open at 2pm daily - Main hall and in Grandstands</li>
+    <li><b>Brandt Pedal Tractor Pull Challenge</b> - 3:30pm - Front of Main Building</li>
+    <li><b>Eric the Juggler</b> - Noon - 8:00pm - Fair Grounds</li>
+    <li><b>Fair Drill Team</b> - 1:00pm & 3:00pm - Main Ring</li>
+    <li><b>Qu'Appelle Valley Heavy Horse Pull</b> - 1:00 pm - Main Ring</li>
+    <li><b>Entertainment</b> - 3:00 to 11:00pm - Main Hall</li>
+    <li><b>Food truck, booths and Merch booths</b> - Noon to 11:00pm</li>
+    <li><b>Summer Fair Tradeshow</b> - Noon to 8:00pm -In Armoury</li>
+    <li><b>Demolition Derby</b> - 4:00pm - Grandstand/Track area</li>
+    <li><b>FIREWORKS</b> - 10:45 pm - Grandstand/Track area</li>
+    <li><b>Midnight Midway Closes</b></li>
+</ul>
+</div>
+</div>
+
+<div class="gx g2">
+<h2><a id="S6S" style="display:none;" onclick='hideitshowit(6);' title="Show pricing details">[+]&nbsp;Pricing&nbsp;Details</a>
+    <a id="H6H" onclick='hideitshowit(6);' title="Hide this day">[-]&nbsp;Pricing&nbsp;Details</a></h2>
+ 
+<div id="D6D" style="display:none;">
+<div style="text-align: center;">
+    <h3>GATE ADMISSION</h3>
+    All prices are Taxes Included
+</div>
+
+<ul>
+    <li>Adults 20-64&nbsp;&nbsp;&nbsp;<b>$18</b></li>
+    <li>Seniors 65+&nbsp;&nbsp;&nbsp;<b>$15</b></li>
+    <li>Students 13-19&nbsp;&nbsp;&nbsp;<b>$15</b></li>
+    <li>Children 7-12&nbsp;&nbsp;&nbsp;<b>$10</b></li>
+    <li>6 & Under Free</li>
+    <li>Family Pass&nbsp;<b>$50</b>(2 adults 2 student/children 12 & under)</li>
+    </ul>
+    
+<h3>CASH ONLY</h3>
+
+<p>138th Summer Fair</p>
+<p>PARADE:
+Tuesday August 1st, 20XX 6pm
+Route: North on Central Ave to River St, East to 6th Ave
+and South to the Exhibition Grounds.</p>
+<p>Tuesday is $5.00 gate entry.</p>
+<p>Please Note
+Some Amusement Company
+Rides Start Aug. 2 and run until
+Aug. 5th.</p>
+</div>
+</div>
+<div style="text-align: center;padding-top: 10px;">
+    <h2>Share this with someone else!</h2>
+	<!-- 
+    // this could be more dynamic with js generated qr code
+    // idea: time stamp it - then see how often it gets used 
+    //       - would only be tracking usage - no personal info collected
+    //       - a nice stat for effectiveness
+    //      MAYBE would be useful if A/B testing done... 
+      -->
+    <img src="ThisURLqrCode.png">
+</div>
+
+<div style="background-color: pink;
+			text-align: center;
+			font-size: small;
+			font-variant: small-caps;
+			padding: 7px;
+			font-weight: bold;
+			font-style: italic; 
+			width:95%">
+    This was created for a proof of concept demonstration.  As a quickly produced POC it not polished, branded nor integrated with a larger web ecosystem - as something like this would typically be. 
+</div>
+
+</div>
+    </form>
+<script>
+
+const isToday = (someDate) => {
+  const tt = new Date();
+  return someDate.getDate() == tt.getDate() &&
+    someDate.getMonth() == tt.getMonth() &&
+    someDate.getFullYear() == tt.getFullYear()
+}
+  
+// an extra detail for those days it happens to be on - it defaults to opening that day's events..
+if (!isToday(new Date(2023,7,1))) { hideitshowit(1);} 
+if (!isToday(new Date(2023,7,2))) { hideitshowit(2);}
+if (!isToday(new Date(2023,7,3))) { hideitshowit(3);} 
+if (!isToday(new Date(2023,7,4))) { hideitshowit(4);} 
+if (!isToday(new Date(2023,7,5))) { hideitshowit(5);} 
+
+</script>
+
+</body>
+</html>
